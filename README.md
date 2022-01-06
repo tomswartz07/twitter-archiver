@@ -18,7 +18,6 @@ First, you'll need a Twitter API key.
     ```
     psql -f schema.sql
     ```
-
 4. Run the docker image.
 
 The docker image will run the python script to get a CSV output,

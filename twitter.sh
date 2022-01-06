@@ -7,4 +7,4 @@ DB_USER="${PGUSER:-postgres}"
 
 /python-fav-tweets.py
 psql -d "${DB_NAME}" -h "${DB_HOST}" -p "${DB_PORT}" -U "${DB_USER}" --file=postgres-fav-tweets.sql
-vacuumdb -q -h "${DB_HOST}" -p "${DB_PORT}" -U "${DB_USER}" --jobs=2 --analyze -w --table='twitter.favorite_tweets' "${DB_NAME}"
+#vacuumdb -q -h "${DB_HOST}" -p "${DB_PORT}" -U "${DB_USER}" --jobs=2 --analyze -w --table='twitter.favorite_tweets' "${DB_NAME}"
