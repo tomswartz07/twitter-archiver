@@ -1,7 +1,7 @@
 \set QUIET 1
 \pset pager off
 \pset footer off
-\timing
+\timing off
 CREATE TEMP TABLE temp_tweets (LIKE twitter.favorite_tweets INCLUDING ALL);
 
 \COPY temp_tweets from '/favorite_tweets.csv' delimiter ',' header csv;
