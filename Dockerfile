@@ -14,15 +14,14 @@ ENV ACCESS_KEY=""
 ENV ACCESS_SECRET=""
 ENV TWITTER_USERNAME=""
 
-COPY twitter.sh .
-COPY postgres-fav-tweets.sql .
-COPY python-fav-tweets.py .
-COPY requirements.txt .
+RUN apk update && apk add --no-cache postgresql-client
 COPY crontab .
+RUN crontab crontab
+COPY postgres-fav-tweets.sql .
+COPY twitter.sh .
+COPY requirements.txt .
 RUN pip install --no-cache-dir --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
-
-RUN apk update && apk add --no-cache postgresql-client
-RUN crontab crontab
+COPY python-fav-tweets.py .
 
 CMD [ "crond", "-f" ]
