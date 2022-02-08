@@ -31,8 +31,7 @@ jobs:
             linux/386
             linux/amd64
             linux/arm/v6
-            ## These versions are broken with psycopg
-            #linux/arm/v7
+            linux/arm/v7
             linux/arm64/v8
           push: true
           tags: |
