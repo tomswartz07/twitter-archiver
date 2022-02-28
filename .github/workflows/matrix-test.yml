@@ -11,6 +11,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
         python-version:
           - '3.x'   # Most Recent 3.x release
@@ -23,9 +24,6 @@ jobs:
     name: Python ${{ matrix.python-version }} Testing
     steps:
       - uses: actions/checkout@v2
-      - name: Get the tag version
-        id: get_version
-        run: echo ::set-output ${{ github.ref_name }}
       - name: Set up Python
         uses: actions/setup-python@v3
         with:
