@@ -24,7 +24,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Get Tag
-        run: echo ${{ env.GITHUB_REF_NAME }}
+        run: echo ${{ GITHUB_REF_NAME }}
       - name: Set up Python
         uses: actions/setup-python@v3
         with:
