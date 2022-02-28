@@ -23,6 +23,8 @@ jobs:
     name: Python ${{ matrix.python-version }} Testing
     steps:
       - uses: actions/checkout@v2
+      - name: Get Tag
+        run: echo ${{ github.event.release.tag_name }}
       - name: Set up Python
         uses: actions/setup-python@v2
         with:

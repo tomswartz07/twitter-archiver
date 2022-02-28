@@ -1,7 +1,8 @@
 name: Publish Container Image
 on:
   push:
-    branches: [ main ]
+    tags:
+      - '*'
 jobs:
   push_to_registry:
     name: Build and Push Container
