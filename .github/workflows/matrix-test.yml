@@ -23,6 +23,9 @@ jobs:
     name: Python ${{ matrix.python-version }} Testing
     steps:
       - uses: actions/checkout@v2
+      - name: Get the tag version
+        id: get_version
+        run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
       - name: Set up Python
         uses: actions/setup-python@v3
         with:
