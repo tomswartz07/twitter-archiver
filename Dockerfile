@@ -1,4 +1,4 @@
-FROM python:3.11.0rc2-alpine
+FROM python:3.12.0a1-alpine
 LABEL org.opencontainers.image.source=https://github.com/tomswartz07/twitter-archiver
 LABEL org.opencontainers.image.authors="tom+docker@tswartz.net"
 LABEL description="Docker container to run a Twitter scrape tool to save/archive account's favorited tweets."
