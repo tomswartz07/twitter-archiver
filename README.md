@@ -1,5 +1,11 @@
 # Tweet Importer
 
+**NOTE:**
+Given recent changes to Twitter Ownership and an [upcoming change to the
+API](https://twitter.com/TwitterDev/status/1621026986784337922), it is very
+likely that this service will not function after 9 Feb 2023.
+
+
 Import tweets into a PostgreSQL database for archival purposes.
 
 Keeping the messages safe for review if the original tweets have been
