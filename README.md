@@ -5,6 +5,8 @@ Given recent changes to Twitter Ownership and an [upcoming change to the
 API](https://twitter.com/TwitterDev/status/1621026986784337922), it is very
 likely that this service will not function after 9 Feb 2023.
 
+As of today,  27 Apr 2023, the app is no longer able to function with a free API key.
+Elon sucks.
 
 Import tweets into a PostgreSQL database for archival purposes.
 
